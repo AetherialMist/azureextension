@@ -4,7 +4,7 @@
     "version": "1.0.20",
     "name": "Sprint Data Summary Extension",
     "description": "Provides ways to view sprint summaries.",
-    "publisher": "TomBarber",
+    "publisher": "CordellStocker",
     "public": false,
     "categories": [
         "Azure Repos", "Azure Boards"
