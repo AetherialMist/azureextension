@@ -1,0 +1,93 @@
+{
+    "manifestVersion": 1,
+    "id": "sprint-summaries",
+    "version": "1.0.20",
+    "name": "Sprint Data Summary Extension",
+    "description": "Provides ways to view sprint summaries.",
+    "publisher": "TomBarber",
+    "public": false,
+    "categories": [
+        "Azure Repos", "Azure Boards"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "scopes": [
+        "vso.work",
+        "vso.code",
+        "vso.project"
+    ],
+    "icons": {
+        "default": "images/pineapple.jpg"
+    },
+    "contributions": [
+        {
+            "id": "sprint-summary-hub-group",
+            "type": "ms.vss-web.hub-group",
+            "description": "Adds a hub to the Work hub group.",
+            "targets": [
+                "ms.vss-web.project-hub-groups-collection"
+            ],
+            "properties": {
+                "name": "Sprint Summary",
+                "order": 50
+            }
+        },
+        {
+            "id": "summary-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Adds the summary hub to the Home hub group",
+            "targets": [
+                ".sprint-summary-hub-group"
+            ],
+            "properties": {
+                "name": "Summary",
+                "order": 1,
+                "uri": "summary.html"
+            }
+        },
+        {
+            "id": "combined-teams-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Adds the combined teams hub to the Home hub group",
+            "targets": [
+                ".sprint-summary-hub-group"
+            ],
+            "properties": {
+                "name": "Combined Teams",
+                "order": 2,
+                "uri": "combinedTeams.html"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "css",
+            "addressable": true
+        },
+        {
+            "path": "dist",
+            "addressable": true,
+            "packagePath": "scripts"
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        },
+        {
+            "path": "images",
+            "addressable": true
+        },
+        {
+            "path": "summary.html",
+            "addressable": true
+        },
+        {
+            "path": "combinedTeams.html",
+            "addressable": true
+        }
+    ]
+}

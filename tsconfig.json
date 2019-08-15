@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "moduleResolution": "node",
+        "target": "es6",
+        "outDir": "dist/",
+        "lib": [
+            "es5",
+            "es6",
+            "dom"
+        ],
+        "types": [
+            "vss-web-extension-sdk"
+        ]
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}

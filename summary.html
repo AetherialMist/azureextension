@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sprint Summary</title>
+    <script src="lib/VSS.SDK.min.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Initialize the VSS SDK
+        VSS.init({
+            usePlatformScripts: true,
+            moduleLoaderConfig: {
+                paths: {
+                    "sprintsummary": "scripts"
+                }
+            }
+        });
+
+        // Wait for the SDK to be initialized
+        VSS.ready(function () {
+            require(["sprintsummary/summary"], function () { });
+            VSS.notifyLoadSucceeded();
+        });
+    </script>
+    <div class="hub-progress pageProgressIndicator"></div>
+    <div class="vss-container" id="vss-extension">
+        <div class="page-container" id="page-container">
+            <div class="settings-header" id="settings-header">
+                <h1>Sprint&nbsp;Summmary&nbsp;Settings</h1>
+            </div>
+            <div class="settings-container" id="settings-container">
+                <div class="left-settings" id="left-settings"></div>
+                <div class="vertical-line"></div>
+                <div class="right-settings" id="right-settings"></div>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="summary-header" id="summary-header">
+                <h1>Sprint&nbsp;Summary</h1>
+            </div>
+            <div class="summary-container" id="summary-container">
+                <div class="summary" id="summary"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

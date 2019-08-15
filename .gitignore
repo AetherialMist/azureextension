@@ -1,0 +1,5 @@
+**/node_modules
+**/.vs
+**/debug-*
+**/dist
+WorkSummary/SprintDataSummaryExtension/out

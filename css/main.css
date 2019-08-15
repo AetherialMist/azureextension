@@ -1,0 +1,85 @@
+﻿.vss-container {
+    overflow: scroll;
+    height: 100vh;
+    width: 100vw;
+}
+
+.page-container {
+    margin-left: 2vw;
+}
+
+.settings-container {
+    display: flex;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.vertical-line {
+    border-left: 2px solid gray;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.horizontal-line {
+    border-top: 1px solid gray;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.column-group {
+    display: flex;
+}
+
+.column-div {
+    float: left;
+}
+
+.section-div {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.button-div {
+    position: absolute;
+    bottom: 0;
+}
+
+.spacer {
+    height: 20px;
+}
+
+.section-div label {
+    margin-left: 20px;
+    /* float: left; */
+}
+
+.section-div label input[type="checkbox"] {
+    margin-left: -20px;
+}
+
+.section-div label input[type="number"] {
+    margin-left: -20px;
+    width: 50px;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: right;
+    padding-right: 3px;
+}
+
+.teams-grid-container {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.teams-grid {
+    height: 100%;
+}
