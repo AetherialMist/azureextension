@@ -130,7 +130,6 @@ export class RestHandler {
             projectId: undefined,
             team: team,
             teamId: undefined
-
         }
 
         try {

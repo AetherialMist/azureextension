@@ -16,8 +16,6 @@ export class DataGatherer {
 
     private requestHandler: RestHandler = new RestHandler()
     private fields: string[] = ['System.Id', 'System.AreaPath', 'System.State']
-    private ElKaminoTeamName: string = 'Low Riders'
-    private AdamTeamName: string = 'A Team'
     private BlockSize: number = 200
 
     public async getSprintDataForProjects(info: { project: string, team: string }[]) {
@@ -188,30 +186,10 @@ export class DataGatherer {
     }
 
     /**
-     * This is specific to Karmak
      * @param areaPath 
      */
     private getTeamName(areaPath: string): string {
         let areaPathParts = areaPath.split('\\')
-        let team = areaPath
-        let teamPart = areaPathParts[1]
-        switch (areaPathParts[0]) {
-            case 'Fusion':
-                if (teamPart) {
-                    team = teamPart
-                }
-                break
-            case 'ElKamino':
-                team = this.ElKaminoTeamName // Not stored in raw data
-                break
-            case 'ADAM Software':
-                team = this.AdamTeamName // Not stored in raw data
-                break
-            default:
-                if (teamPart) {
-                    team = teamPart
-                }
-        }
-        return team
+        return areaPathParts[1]
     }
 }

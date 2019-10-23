@@ -19,6 +19,9 @@ export function formatDate(date: Date, addDays: number = 0, setTime?: string) {
     let day = date.getDate() // 1-31
 
     if (addDays !== 0) {
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 == 0) {
+            monthDays[1] = 29
+        }
         day += addDays
         if (day > monthDays[month]) {
             day = day - monthDays[month]
@@ -28,6 +31,7 @@ export function formatDate(date: Date, addDays: number = 0, setTime?: string) {
             month = 0
             year++
         }
+        monthDays[1] = 28
     }
     month++ // To get 1-12 instead of 0-11
     return `${year}-${month}-${day}T${time}.000Z`
